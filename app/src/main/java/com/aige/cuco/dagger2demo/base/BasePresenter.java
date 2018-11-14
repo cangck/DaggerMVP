@@ -5,8 +5,8 @@ import com.aige.cuco.dagger2demo.imp.IPresenter;
 import com.aige.cuco.dagger2demo.imp.IView;
 
 public class BasePresenter<V extends IView, M extends IModel> implements IPresenter {
-    M mModel;
-    V mRootView;
+    public M mModel;
+    public V mRootView;
 
     public BasePresenter(M mModel, V mView) {
         this.mModel = mModel;

@@ -8,5 +8,5 @@ import javax.inject.Inject;
 
 public class BaseActivity<P extends IPresenter> extends AppCompatActivity {
     @Inject
-    P Presenter;
+    public P mPresenter;
 }

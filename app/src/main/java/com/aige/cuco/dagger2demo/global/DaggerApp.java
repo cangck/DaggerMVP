@@ -12,7 +12,7 @@ public class DaggerApp extends Application {
     protected void attachBaseContext(Context base) {
         mAppComponent = DaggerAppComponent.builder()
                 .application(this)
-                .backendModule(new BackendModule())
+                .storageModule(new StorageModule())
                 .frontendModule(new FrontendModule()).build();
         super.attachBaseContext(base);
     }
