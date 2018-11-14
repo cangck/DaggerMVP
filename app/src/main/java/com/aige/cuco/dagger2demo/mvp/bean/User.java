@@ -1,4 +1,4 @@
-package com.aige.cuco.dagger2demo.mvp;
+package com.aige.cuco.dagger2demo.mvp.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;

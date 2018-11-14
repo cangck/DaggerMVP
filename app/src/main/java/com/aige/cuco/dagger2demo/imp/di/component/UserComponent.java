@@ -6,6 +6,7 @@ import com.aige.cuco.dagger2demo.global.AppComponent;
 import com.aige.cuco.dagger2demo.imp.di.module.UserModule;
 
 import dagger.Component;
+
 @ActivityScope
 @Component(modules = {UserModule.class}, dependencies = AppComponent.class)
 public interface UserComponent {

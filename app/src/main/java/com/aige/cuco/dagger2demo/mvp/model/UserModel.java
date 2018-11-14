@@ -3,7 +3,7 @@ package com.aige.cuco.dagger2demo.mvp.model;
 import com.aige.cuco.dagger2demo.annotation.ActivityScope;
 import com.aige.cuco.dagger2demo.base.BaseModel;
 import com.aige.cuco.dagger2demo.manager.IRepositoryManager;
-import com.aige.cuco.dagger2demo.mvp.User;
+import com.aige.cuco.dagger2demo.mvp.bean.User;
 import com.aige.cuco.dagger2demo.mvp.contract.UserCtract;
 
 import java.util.ArrayList;

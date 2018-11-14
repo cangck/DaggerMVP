@@ -3,7 +3,7 @@ package com.aige.cuco.dagger2demo.mvp.presenter;
 import android.util.Log;
 
 import com.aige.cuco.dagger2demo.base.BasePresenter;
-import com.aige.cuco.dagger2demo.mvp.User;
+import com.aige.cuco.dagger2demo.mvp.bean.User;
 import com.aige.cuco.dagger2demo.mvp.contract.UserCtract;
 
 import java.util.List;

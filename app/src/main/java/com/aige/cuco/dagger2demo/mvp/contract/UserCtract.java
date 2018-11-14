@@ -2,7 +2,7 @@ package com.aige.cuco.dagger2demo.mvp.contract;
 
 import com.aige.cuco.dagger2demo.imp.IModel;
 import com.aige.cuco.dagger2demo.imp.IView;
-import com.aige.cuco.dagger2demo.mvp.User;
+import com.aige.cuco.dagger2demo.mvp.bean.User;
 
 import java.util.List;
 
