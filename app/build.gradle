@@ -46,11 +46,11 @@ dependencies {
     implementation('com.github.VictorAlbertos.Jolyglot:gson:0.0.4') {
         exclude module: 'gson'
     }
-
     implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
-//    日志处理工具
+    //    日志处理工具
     implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 }

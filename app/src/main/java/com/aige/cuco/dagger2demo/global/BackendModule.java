@@ -2,6 +2,7 @@ package com.aige.cuco.dagger2demo.global;
 
 import android.app.Application;
 
+import com.aige.cuco.dagger2demo.global.http.RequestInterceptor;
 import com.aige.cuco.dagger2demo.manager.IRepositoryManager;
 import com.aige.cuco.dagger2demo.manager.imp.RepositoryManager;
 import com.aige.cuco.dagger2demo.utils.DataHelper;
@@ -15,6 +16,7 @@ import javax.inject.Singleton;
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
+import okhttp3.Interceptor;
 
 @Module
 public abstract class BackendModule {
@@ -34,7 +36,8 @@ public abstract class BackendModule {
     }
 
 
-
     @Binds
     abstract IRepositoryManager bindRepositoryManager(RepositoryManager repositoryManager);
+
+
 }

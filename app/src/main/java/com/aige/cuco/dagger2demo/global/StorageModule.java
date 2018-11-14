@@ -11,6 +11,10 @@ import com.aige.cuco.dagger2demo.manager.storage.LruCache;
 import com.google.gson.Gson;
 
 import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Singleton;
 
@@ -18,13 +22,14 @@ import dagger.Module;
 import dagger.Provides;
 import io.rx_cache2.internal.RxCache;
 import io.victoralbertos.jolyglot.GsonSpeaker;
+import okhttp3.internal.Util;
 
 @Module
 public class StorageModule {
 
     @Provides
     FileCache provideFileCache(Application application) {
-            return new FileCache(application);
+        return new FileCache(application);
     }
 
     @Singleton
@@ -51,5 +56,12 @@ public class StorageModule {
     RxCache provideRxCache(Application application, File cacheFile, Gson gson) {
         RxCache.Builder builder = new RxCache.Builder();
         return builder.persistence(cacheFile, new GsonSpeaker(gson));
+    }
+
+    @Provides
+    @Singleton
+    ExecutorService provideExecutorService() {
+        return new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60, TimeUnit.SECONDS,
+                new SynchronousQueue<Runnable>(), Util.threadFactory("Arms Executor", false));
     }
 }
